@@ -1,0 +1,13 @@
+@import url(reser.css);
+@import url(@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat&display=swap'););
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+

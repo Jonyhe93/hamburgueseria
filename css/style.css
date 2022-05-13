@@ -101,8 +101,49 @@ header nav .menu li:last-child a{
 }
 
 header nav .menu :is(.activo, a:hover){
-    color: var(--fuentePrincipal);
+    color: var(--colorPrincipal);
 }
+header nav:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    
+}
+/* final header*/
+
+/* principio footer */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--colorSecundario);
+    color: white;
+    padding: var(--marginGrid);
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+
+}
+
+footer a:hover{
+    color: var(--colorPrincipal);
+}
+.arriba{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    font-size: 2em;
+}
+
+.arriba a{
+    color: var(--colorPrincipal);
+}
+
+/*Final de footer*/
 
 /* inicio header */
 /*breakpoint 768px */

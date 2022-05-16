@@ -317,6 +317,7 @@ section .flex{
 }
 #aboutus .flex{
     display: flex;
+    flex-direction: column;
 }
 
 
@@ -343,6 +344,14 @@ section article{
     padding: calc(var(--marginGrid)*2);
     border-bottom: 0px;
     border-left: 1px solid #aaa;
+}
+#aboutus .flex{
+    flex-direction: row;
+    padding-top: var(--marginGrid);
+}
+#aboutus figure{
+    width: 85%;
+    margin: 0.5em auto;
 }
 }
 

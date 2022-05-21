@@ -1,0 +1,262 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+html{
+    scroll-behavior: smooth; /* para general un scroll animado */
+}
+
+:root{
+    --fuentePrincipal:'Montserrat', sans-serif;
+    --fuenteSecundaria:'Handlee', cursive;
+    --colorPrincipal: #fa573a;
+    --colorSecundario: #21242e;
+    --fontSize: 1em;
+    --anchoMaximo: 1100px;
+    --marginGrid: 1em;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: var(--fontSize);
+
+}
+
+.container{
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+
+}
+
+/* inicio header */
+.hero{
+    background-image: url(../images/fondo.jpg );
+    background-color: #999;
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+}
+
+.hero .container{
+    width: 95%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.hero h1{
+font-family: var(--fuenteSecundaria);
+font-size: 230%;
+color: white;
+
+}
+.hero :is(h2, .container>div){
+    margin: var(--marginGrid)  0;
+}
+.hero h2{
+    color: var(--colorPrincipal);
+    font-size: 125%;
+    text-shadow: 2px 2px 3px black;
+}
+
+.hero p{
+    color: white;
+    font-size: 155%;
+}
+
+.boton{
+display: inline-block;
+background-color: var(--colorPrincipal);
+padding: 1.15em;
+color: white;
+text-decoration: none;
+border: 1px solid var(--colorPrincipal);
+}
+
+.boton:hover{
+    background-color: transparent;
+    color: var(--colorPrincipal);
+}
+.boton:hover i{
+    transition: 0.5s;
+    transform: translateX(5px);
+}
+.hero .social{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+.hero .social a{
+    color: white;
+    text-decoration: none;
+    font-size: 700;
+}
+/* final hero+/
+
+/* inicio ourservices*/
+
+section{
+    padding: 2.5em 0 4.5em 0;
+}
+
+section h2{
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 200%;
+    text-align: center;
+}
+
+section h2 span {
+    color: var(--colorPrincipal);
+}
+
+section .underline {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: 700;
+    color: var(--colorPrincipal);
+    text-align: center;
+}
+
+section .underline hr{
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    border-color: var(--colorPrincipal);
+}
+
+
+
+
+#ourservices .grid{
+    display: grid;
+    gap: var(--marginGrid);
+    padding: 0 var(--marginGrid);
+}
+
+section article{
+    padding: calc(var(--marginGrid)*2) 0;
+    border-bottom: 1px solid #aaa;
+}
+
+section h3{
+    font-weight: 700;
+    margin: 0.5em 0;
+    font-size: 110%;
+}
+
+section p{
+    color: #777;
+    line-height: 1.15em;
+    margin-bottom: var(--marginGrid);
+}
+
+#ourservices article>div i{
+    border: 1px solid var(--colorPrincipal);
+    color: var(--colorPrincipal);
+    font-size: 150%;
+    padding : 0.5em;
+}
+
+.enlace{
+    text-decoration: none;
+    color: var(--colorPrincipal);
+    font-weight: 700;
+} 
+
+.fa-truck{
+    transform: rotateY(180deg);
+}
+
+/* final oursevices */
+
+
+/* Inicio About ut */
+
+section h4{
+    color: var(--colorPrincipal);
+    margin-bottom: 0.5em;
+}
+section .flex{
+    padding: var(--marginGrid);
+}
+#about figure{
+    width: 85%;
+    margin: 2em auto;
+}
+
+#aboutus figure .marco{
+    border: 3px solid var(--colorPrincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+#aboutus figure .marco img{
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+#aboutus figure:hover :is(.marco, .marco img){
+    transform: rotateZ(0deg);
+}
+#aboutus .flex{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Final About ut */
+
+/* mediaquerys */
+
+/*breakpoint 768px */
+@media(min-width: 48em){
+
+.ourservices .grid{
+    grid-template-columns: repeat(2, 1fr);
+}
+#ourservices .grid article:last-child{
+    grid-column: 1/3;
+}
+
+section article{
+    padding: calc(var(--marginGrid)*2);
+    border-bottom: 0px;
+    border-left: 1px solid #aaa;
+}
+#aboutus .flex{
+    flex-direction: row;
+    padding-top: var(--marginGrid);
+}
+#aboutus figure{
+    width: 85%;
+    margin: 0.5em auto;
+}
+}
+
+@media(min-width: 62.750em){
+   
+    #ourservices .grid{
+        grid-template-columns: repeat(3, 1fr)
+     }
+ 
+     #ourservices .grid article:last-child{
+         grid-column: 3/4;
+     }
+ 
+     /* pagina interesante de css grid 
+     https://css-tricks.com/snippets/css/complete-guide-grid/ */
+ 
+ }
+

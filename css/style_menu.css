@@ -37,8 +37,10 @@ body{
 
 }
 section{
-    padding: 2.5em 0 4.5em 0;
+    padding: 2.5em var(--marginGrid) 4.5em var(--marginGrid);
     background-color: var(--colorSecundario);
+    
+
 }
 
 section article{
@@ -79,7 +81,9 @@ section .container .flex{
      padding-top: 3.5em;
    
 }
-
+article{
+    margin-bottom: 3em;
+}
 
 aside h2{
     color:white;
@@ -137,17 +141,36 @@ aside hr{
     text-decoration: none;
     color: var(--colorPrincipal);
     font-weight: 700;
-    padding-left: 2em;
+    padding-left: 0;
 } 
 
-section article figure{
-    padding-right: var(--marginGrid);
+section article figure h3{
+    font-size: var(--fuenteSecundaria);
+    font-weight: 700;
+    color: white;
+    padding: 1.5em 0.5em 1em 0;
+}   
+
+
+figure h3 span{
+    color: var(--colorPrincipal);
+    float: right;
+
 }
+
+figure p{
+    font-size: var(--fuenteSecundaria);
+    font-weight: 400;
+    color: gray;
+    padding: 1em 0.5em 1em 0;
+}
+
 
 @media(min-width: 62.750em){
 section .container .flex{
    
     grid-template-columns: 1fr 1fr 1fr;
   
-}   
+}
+
 }

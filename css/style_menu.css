@@ -44,13 +44,14 @@ section{
 }
 
 section article{
-    padding: 0 2em;
+    padding: 0 0 0 2em;
 }
 section h2{
         color: white;
         font-family: var(--fuenteSecundaria);
         font-size: 200%;
         text-align: center;
+        padding-top: var(--marginGrid);
 }
 
 section h2 span {
@@ -142,6 +143,7 @@ aside hr{
     color: var(--colorPrincipal);
     font-weight: 700;
     padding-left: 0;
+    line-height: 2em;
 } 
 
 section article figure h3{
@@ -149,12 +151,14 @@ section article figure h3{
     font-weight: 700;
     color: white;
     padding: 1.5em 0.5em 1em 0;
+    line-height: 2em;
 }   
 
 
 figure h3 span{
     color: var(--colorPrincipal);
     float: right;
+    line-height: 2em;
 
 }
 
@@ -165,12 +169,25 @@ figure p{
     padding: 1em 0.5em 1em 0;
 }
 
+figure.grid{
+display: grid;
+gap:var(--marginGrid);
+}
 
 @media(min-width: 62.750em){
 section .container .flex{
    
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30% 70%;
   
 }
-
+figure.grid{
+grid-template-columns: 30% 70%;
+}
+section article figure h3{
+    padding: 0 0.5em 0 0;
+} 
+section{
+    padding: 0 var(--marginGrid) 4.5em var(--marginGrid);
+    
+} 
 }

@@ -1,0 +1,151 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+html{
+    scroll-behavior: smooth; /* para general un scroll animado */
+}
+
+:root{
+    --fuentePrincipal:'Montserrat', sans-serif;
+    --fuenteSecundaria:'Handlee', cursive;
+    --colorPrincipal: #fa573a;
+    --colorSecundario: #21242e;
+    --fontSize: 1em;
+    --anchoMaximo: 1100px;
+    --marginGrid: 1em;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: var(--fontSize);
+
+}
+
+.container{
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+
+}
+
+section{
+    padding: 2.5em 0 4.5em 0;
+}
+
+section article{
+padding: 0 2em;
+}
+section h2{
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 200%;
+    text-align: center;
+}
+
+section h2 span {
+    color: var(--colorPrincipal);
+}
+
+section .underline {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: 700;
+    color: var(--colorPrincipal);
+    text-align: center;
+}
+
+section .underline hr{
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    border-color: var(--colorPrincipal);
+}
+
+section .container .flex{
+   
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+    row-gap:4em;  
+     padding-top: 3.5em;
+   
+}
+
+    section .container article .weekly{
+
+        position: relative;
+
+}
+
+
+
+section .container article .weekly div{
+    position: absolute;
+    background-color:#fa573abd;
+    padding: 0.65em;
+    top: 0;
+    left: 0;
+    
+}
+
+section .container article .weekly div :is(h3,h4){
+    color: white;
+    text-align: center;
+    font-size:calc(var(--fontSize)*1);
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    padding: 0;
+
+
+}
+
+section .container article .weekly div h3{
+    padding-bottom: 0.5em;
+}
+
+section .container article h3{
+    font-size:calc(var(--fontSize)*1.25);
+    font-weight: 700;
+    font-family: var(--fuentePrincipal);
+    padding: 1em 0em 0.5em 1.5em;
+
+}
+
+section .container article h6{
+    font-weight: 700;
+    font-family: var(--fuentePrincipal);
+    color: var(--colorPrincipal);
+    padding: 0 1.5em 1em 2em;
+}
+
+section .container article p{
+    font-weight: 700;
+    font-family: var(--fuentePrincipal);
+    color:gray;
+    line-height: 1.5em;
+    padding: 0 1.5em 1.5em 2em;
+}
+
+.enlace{
+    text-decoration: none;
+    color: var(--colorPrincipal);
+    font-weight: 700;
+    padding-left: 2em;
+} 
+@media(min-width: 62.750em){
+section .container .flex{
+   
+    grid-template-columns: 1fr 1fr 1fr;
+  
+}   
+}
